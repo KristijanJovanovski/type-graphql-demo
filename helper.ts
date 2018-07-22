@@ -38,6 +38,12 @@ export const profilesData = [
     ...(merge()['profiles'])
 ]
 
+/*  In the following methods for simplicity we are assuming that 
+ *  user with id = 1 should match profile with id = 1 and so on,
+ *  so we use can use the same id to query for both.
+ *  In reality we query the database
+ */
+
 export const getUserByProfileId = async (profileId: number) => {
     const profile = profilesData[profileId];
     const user = usersData[profileId];
